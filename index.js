@@ -4,7 +4,7 @@ const path = require('path');
 
 // Initialize the Telegram Bot
 const api = new TelegramBot({
-    token: 'YOUR_TELEGRAM_BOT_TOKEN',
+    token: '7916631091:AAFABgUgo-tVw7AHrhmIffDzb2bNwy4fygQ',
     updates: { enabled: true }
 });
 
