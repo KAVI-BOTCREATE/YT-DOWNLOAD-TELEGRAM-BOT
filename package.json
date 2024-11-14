@@ -7,7 +7,7 @@
     "start": "node index.js"
   },
   "dependencies": {
-    "telegram-bot-api": "^3.3.5",
+    "telegram-bot-api": "^2.0.1",
     "ytdl-core": "^4.9.1",
     "ffmpeg-static": "^4.2.7",
     "fluent-ffmpeg": "^2.1.2"
