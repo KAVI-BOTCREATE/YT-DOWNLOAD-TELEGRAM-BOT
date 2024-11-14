@@ -12,6 +12,8 @@
     "ffmpeg-static": "^4.2.7",
     "fluent-ffmpeg": "^2.1.2",
     "dotenv": "^16.4.5",
-    "pm2": "5.4.3"
+    "pm2": "5.4.3",
+    "ytdl-mp3": "5.0.0",
+    "youtubedl-core": "4.11.7"
   }
 }
