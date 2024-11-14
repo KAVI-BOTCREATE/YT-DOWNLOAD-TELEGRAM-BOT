@@ -4,7 +4,7 @@
   "description": "A Telegram bot to download YouTube videos as MP3",
   "main": "index.js",
   "scripts": {
-    "start": "pm2 node index.js"
+    "start": "node index.js"
   },
   "dependencies": {
     "telegram-bot-api": "^2.0.1",
