@@ -1,27 +1,35 @@
-name: Run Telegram Bot
+name: Node.js CI
 
 on:
-  workflow_dispatch:  # Allows manual run
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
   schedule:
-    - cron: '0 * * * *'  # Runs every hour (change as needed)
+    - cron: '0 */6 * * *'
 
 jobs:
-  run-bot:
+  build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [20.x]
+        
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'  # Specify your Node.js version
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
 
-      - name: Install dependencies
-        run: |
-          npm install
+    - name: Install dependencies
+      run: npm install
 
-      - name: Run Bot
-        run: |
-          npm start
+    - name: Start application
+      run: npm start
