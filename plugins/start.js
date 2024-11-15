@@ -6,7 +6,7 @@ module.exports = (bot) => {
     const chatId = msg.chat.id;
     bot.sendMessage(
       chatId,
-      "Welcome! Send me a YouTube link, and I'll download the audio for you in MP3 format."
+      "Welcome! I'm Kavi_official telegram bot . You can use me to everything "
     );
   });
 };
